@@ -110,6 +110,19 @@ export function Game() {
         while (true) {
             const [message_id, _message, sender] = await flow.until_any_message();
             view.do_message(message_id, _message, sender);
+
+            if (message_id == 'BTN_BACK') {
+                log('BTN_BACK');
+            }
+
+            if (message_id == 'BTN_RESTART') {
+                log('BTN_RESTART');
+            }
+
+            if (message_id == 'BTN_HELP') {
+                log('BTN_HELP');
+            }
+
             if (message_id == 'DRAG_CARD') {
                 const message = _message as Messages['DRAG_CARD'];
                 const id_card = message.id;
