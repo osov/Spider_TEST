@@ -138,7 +138,6 @@ export function Game() {
                     }
                 }
             }
-
             if (message_id == 'DROP_STACK') {
                 const message = _message as Messages['DROP_STACK'];
                 log('DROP_STACK', message);
